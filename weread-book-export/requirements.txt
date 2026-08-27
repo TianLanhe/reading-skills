@@ -1,0 +1,1 @@
+# 运行时与开发依赖由 pyproject.toml 和 uv.lock 固定管理。

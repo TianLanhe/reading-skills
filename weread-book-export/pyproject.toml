@@ -1,0 +1,45 @@
+[project]
+name = "weread-book-export"
+version = "0.1.0"
+description = "使用隔离系统 Chrome 导出经校验的微信读书 Markdown 和图片"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "playwright==1.62.0",
+  "pillow==12.3.0",
+]
+
+[project.scripts]
+weread-book-export = "weread_export.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest==9.1.1",
+  "pytest-asyncio==1.4.0",
+  "ruff==0.16.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "weread_export"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+  "live: 需要用户账号、扫码和真实授权书籍的验收",
+  "package: 从分发包执行真实私有运行时安装的验收",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+exclude = ["export_precise.py", "download_images.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]

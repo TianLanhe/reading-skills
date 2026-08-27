@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "app_version": "0.1.0",
+  "release_channel": "stable",
+  "min_macos": "13.0",
+  "python": "3.13.14",
+  "playwright": "1.62.0",
+  "chrome_tested_major": 151,
+  "uv": {
+    "version": "0.12.1",
+    "artifacts": {
+      "arm64": {
+        "name": "uv-aarch64-apple-darwin.tar.gz",
+        "sha256": "77d2906988e8074fd43f2f329ec452ebbf9b0c257ba1c66451c71de70a6baf42"
+      },
+      "x86_64": {
+        "name": "uv-x86_64-apple-darwin.tar.gz",
+        "sha256": "69d9f9a00337f25a50dcb13882052da08b8469bac11091c98c5694c3c6721467"
+      }
+    }
+  }
+}

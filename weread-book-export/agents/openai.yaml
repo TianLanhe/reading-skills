@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信读书整书导出"
+  short_description: "将微信读书正文和图片导出为经校验的 Markdown"
+  default_prompt: "使用 $weread-book-export 导出我提供的微信读书 URL 或 Book ID，并返回结果目录。"

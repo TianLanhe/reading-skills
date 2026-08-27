@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+WEREAD_BIN_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+exec "$WEREAD_BIN_DIR/../scripts/bootstrap.sh" "$@"

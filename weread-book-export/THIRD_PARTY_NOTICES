@@ -1,0 +1,13 @@
+第三方来源说明
+==============
+
+本项目基于 lbq110/weread-exporter 的思路和源码改造：
+
+- 上游仓库：https://github.com/lbq110/weread-exporter
+- 上游作者标识：roger（lbq110）
+- 取用基线：ed28a8fe9fdb4631974c4e5c602b15a3b7ac8fcd
+- 保留的基线文件：export_precise.py、download_images.py
+
+本次改造时，上游仓库快照中没有可见的 LICENSE 文件。项目委托方说明其已与仓库所有者确认该个人项目采用 MIT 许可，并承担该授权前提的责任。本分发包按此明确授权前提保留来源说明；如授权状态发生变化，应在继续分发前重新核实。
+
+本项目新增或重写了隔离 Chrome、认证快照、无损页面模型、章节和 Markdown、图片验证、SQLite/WAL、并发锁、原子发布、安全清理、CLI、安装器、中文 Skill 和测试。新增贡献适用项目根目录的 MIT License。

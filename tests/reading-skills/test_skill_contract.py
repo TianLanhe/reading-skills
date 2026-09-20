@@ -37,3 +37,12 @@ class ReadingSkillContractTests(unittest.TestCase):
         self.assertFalse((ROOT / "reading-inspection" / "references").exists())
         self.assertTrue((ROOT / "reading-analysis" / "references" / "workflow.md").is_file())
         self.assertTrue((ROOT / "reading-synthesis" / "references" / "workflow.md").is_file())
+
+    def test_analysis_routes_before_optional_evaluation(self) -> None:
+        skill_path = ROOT / "reading-analysis" / "SKILL.md"
+        self.assertTrue(skill_path.is_file())
+        text = skill_path.read_text()
+        self.assertIn("references/workflow.md", text)
+        self.assertIn("知识类", text)
+        self.assertIn("文学类", text)
+        self.assertGreater(text.find("评议"), text.find("重构"))

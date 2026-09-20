@@ -1,0 +1,7 @@
+interface:
+  display_name: "分析阅读"
+  short_description: "重构已提供材料的结构、概念、主张、论证与文学表达方式"
+  default_prompt: "使用 $reading-analysis 分析我提供的材料，并以原文定位区分事实、推断与问题。"
+
+policy:
+  allow_implicit_invocation: true

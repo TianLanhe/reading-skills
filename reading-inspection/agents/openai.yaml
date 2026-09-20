@@ -1,0 +1,7 @@
+interface:
+  display_name: "检视阅读"
+  short_description: "快速判断已提供材料的结构、价值与后续阅读投入深度"
+  default_prompt: "使用 $reading-inspection 检视我提供的材料，判断应读多深并给出路径。"
+
+policy:
+  allow_implicit_invocation: true

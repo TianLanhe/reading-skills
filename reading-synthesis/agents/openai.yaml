@@ -1,0 +1,4 @@
+interface:
+  display_name: "主题阅读"
+  short_description: "围绕用户问题比较至少两份材料，建立中立词汇与争议地图"
+  default_prompt: "使用 $reading-synthesis 围绕我的问题比较这些材料，建立中立框架并保留出处。"

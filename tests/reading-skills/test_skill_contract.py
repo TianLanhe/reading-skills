@@ -46,3 +46,12 @@ class ReadingSkillContractTests(unittest.TestCase):
         self.assertIn("知识类", text)
         self.assertIn("文学类", text)
         self.assertGreater(text.find("评议"), text.find("重构"))
+
+    def test_synthesis_builds_a_neutral_frame_before_disputes(self) -> None:
+        skill_path = ROOT / "reading-synthesis" / "SKILL.md"
+        self.assertTrue(skill_path.is_file())
+        text = skill_path.read_text()
+        self.assertIn("references/workflow.md", text)
+        self.assertIn("问题", text)
+        self.assertIn("至少两份", text)
+        self.assertGreater(text.find("争议"), text.find("中立词汇"))

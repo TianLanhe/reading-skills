@@ -1,0 +1,3 @@
+[submodule "book-to-skill"]
+	path = book-to-skill
+	url = https://github.com/virgiliojr94/book-to-skill.git

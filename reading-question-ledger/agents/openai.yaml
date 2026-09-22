@@ -1,0 +1,7 @@
+interface:
+  display_name: "问题台账阅读"
+  short_description: "把材料中的高价值问题、作者回答与未解项整理为可追溯表格"
+  default_prompt: "使用 $reading-question-ledger 整理我提供材料中值得追问、作者已答和仍未回答的问题。"
+
+policy:
+  allow_implicit_invocation: true
